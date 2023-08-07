@@ -334,9 +334,10 @@ function ManageEvent() {
                             type="text"
                             onChange={(e) => {
                               let s = e.target.value;
+                              console.log(eventData)
                               let filterData = eventData.filter(
                                 (a) =>
-                                  a.org.organizationName
+                                  a.orgId.organizationName
                                     .toLowerCase()
                                     .includes(s) ||
                                   a.eventType.toLowerCase().includes(s) ||

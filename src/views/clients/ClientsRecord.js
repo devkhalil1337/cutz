@@ -172,11 +172,10 @@ function ClientsRecord() {
                               let s = e.target.value;
                               let filterData = clientData.filter(
                                 (a) =>
-                                  a.client.firstName
+                                  a.firstName
                                     .toLowerCase()
                                     .includes(s) ||
-                                  a.client.lastName.toLowerCase().includes(s) ||
-                                  a.client.email.toLowerCase().includes(s)
+                                  a.lastName.toLowerCase().includes(s)
                               );
                               setClientList(filterData);
                             }}

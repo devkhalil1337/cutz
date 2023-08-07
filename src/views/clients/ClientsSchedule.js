@@ -252,11 +252,11 @@ function ClientsSchedule() {
                               let s = e.target.value;
                               let filterData = clientData.filter(
                                 (a) =>
-                                  a.client.firstName
+                                  a.clientID.firstName
                                     .toLowerCase()
                                     .includes(s) ||
-                                  a.client.lastName.toLowerCase().includes(s) ||
-                                  a.client.email.toLowerCase().includes(s)
+                                  a.clientID.lastName.toLowerCase().includes(s) ||
+                                  a.clientID.email.toLowerCase().includes(s)
                               );
                               setClientList(filterData);
                             }}
