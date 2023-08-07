@@ -33,7 +33,7 @@ function VerifyCodePage() {
         otp: code,
       })
       .then((result) => {
-        if (result.data.status === "OK") {
+        if (result.data.message === "Otp matched successfully") {
           alert("Otp Verified");
           navigate(`/reset-password/${email}`);
         } else {
@@ -42,7 +42,7 @@ function VerifyCodePage() {
       })
       .catch((error) => {
         alert(error);
-        navigate(`/reset-password/${email}`);
+        // navigate(`/reset-password/${email}`);
       });
   };
 

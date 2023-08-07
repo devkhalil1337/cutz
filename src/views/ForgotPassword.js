@@ -32,7 +32,7 @@ function ForgotPasswordPage() {
         email: email,
       })
       .then((result) => {
-        if (result.data.status === "OK") {
+        if (result.data.message === "OTP sent successfully") {
           alert("Otp sent");
           navigate(`/verify-code/${email}`);
           setLoading(false);
@@ -43,7 +43,7 @@ function ForgotPasswordPage() {
       })
       .catch((error) => {
         alert(error);
-        navigate(`/verify-code/${email}`);
+        // navigate(`/verify-code/${email}`);
         setLoading(false);
       });
   };
