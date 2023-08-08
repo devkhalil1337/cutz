@@ -239,7 +239,7 @@ function ManageEvent() {
     let data = [];
     events.map((event) => {
       let org = orgs.find((o) => o._id === event.orgId);
-      let group = groups.find((g) => g.eventId === event._id);
+      let group = groups.find((g) => g.eventId._id === event._id);
       data.push({ ...event, org, group });
     });
 
